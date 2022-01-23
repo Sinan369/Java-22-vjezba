@@ -1,9 +1,8 @@
 
 import animal.Cat;
 import animal.Dog;
-import enums.Season;
 import human.*;
-import weather.Seasons;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -26,13 +25,5 @@ public class Main {
         profa.getSalaryAmount();
         profa.getAcademicTitle();
         profa.getPets();
-        System.out.println("--------");
-        Seasons godisnjaDoba = new Seasons();
-        godisnjaDoba.setName(Season.SUMMER);
-        godisnjaDoba.getName();
-
-
-
-
     }
 }
