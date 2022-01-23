@@ -1,23 +1,33 @@
-import beverage.*;
-import movie.Movie;
+
+import animal.Animal;
+import animal.Cat;
+import animal.Dog;
+import human.*;
 
 public class Main {
     public static void main(String[] args) {
+        Student student = new Student("Armin", "Husic", "121000587745454", Gender.MALE, 18, 557788, new Cat("Mikica", Gender.FEMALE, 11884, 1, "Turska Van Mačka") {
+        });
+        student.getName();
+        student.getSurname();
+        student.getAge();
+        student.getGender();
+        student.getId();
+        student.getIndexId();
+        student.getPets();
+        System.out.println("---------------");
+        Professor profa = new Professor("Amar", "Feratovic", "14050023789894", Gender.MALE, 20, 1000, "prof.dr", new Dog("Roža", Gender.MALE, 55778,3, "Huskey"));
+        profa.getName();
+        profa.getSurname();
+        profa.getAge();
+        profa.getGender();
+        profa.getId();
+        profa.getSalaryAmount();
+        profa.getAcademicTitle();
+        profa.getPets();
 
-        Beverage coffee = new Coffee();
-        BeverageConsumer beverageConsumer = new BeverageConsumer(coffee);
-        beverageConsumer.consume();
 
-        TurkishTea turkishTea = new TurkishTea();
-        BeverageConsumer beverageConsumer1 = new BeverageConsumer(turkishTea);
-        beverageConsumer1.consume();
 
-        Beverage tea = new Tea();
-        BeverageConsumer beverageConsumer2 = new BeverageConsumer(tea);
-        beverageConsumer2.consume();
 
-        Juice juice = new Juice();
-        BeverageConsumer beverageConsumer3 = new BeverageConsumer(juice);
-        beverageConsumer3.consume();
     }
 }
