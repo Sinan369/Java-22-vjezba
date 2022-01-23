@@ -5,7 +5,8 @@ import animal.Dog;
 
 public class AnimalTester {
     public static void main(String[] args) {
-        Animal animal = new Cat();
+        Animal animal = new Dog();
+        animal = new Cat();
 
         if (animal instanceof Dog){
             System.out.println("Pas");
