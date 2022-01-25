@@ -3,6 +3,7 @@ import weather.Seasons;
 
 import java.util.Random;
 
+
 public class SeasonTester {
     public static void main(String[] args) {
         Random random = new Random();

@@ -9,7 +9,6 @@ public class Seasons {
 
     public Season getSeason() {
         System.out.println("Godišnje doba je: " + season.getName() + season.getDescription());
-
         return season;
     }
 
