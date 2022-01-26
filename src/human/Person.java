@@ -4,7 +4,7 @@ import animal.Animal;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name, surname, id;
     private Gender gender;
     private int age;
@@ -82,6 +82,10 @@ public class Person {
         return age;
     }
 
+    public int compareAge() {
+        return age;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -102,5 +106,16 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, id, gender, age, pets);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (age < o.compareAge()) {
+            return -1;
+        }
+        if (age > o.compareAge()){
+            return 1;
+        }
+        return 0;
     }
 }
