@@ -48,4 +48,9 @@ public abstract class Animal {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Ime ljubimca: " +  name + " " + age + " godine " + "ID: " + id;
+    }
 }

@@ -24,5 +24,12 @@ public class Main {
         profa.getSalaryAmount();
         profa.getAcademicTitle();
         profa.getPets();
+        System.out.println("---------------");
+        Person osoba = new Person("Adnan", "Abazovic", "17120044844454", Gender.MALE, 21);
+        osoba.getName();
+        osoba.getSurname();
+        osoba.getAge();
+        osoba.getGender();
+        osoba.getId();
     }
 }

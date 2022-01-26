@@ -23,5 +23,4 @@ public class Cat extends Animal{
     public void setCatBreed(String catBreed) {
         this.catBreed = catBreed;
     }
-
 }

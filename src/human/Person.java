@@ -27,7 +27,7 @@ public class Person {
 
 
     public Animal getPets() {
-        System.out.println("Ljubimac je: " + pets);
+        System.out.println(pets);
         return pets;
     }
 
@@ -86,6 +86,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return name + " " + surname + " Matični broj: " + id + " " + gender.getName() + " Starost: " + age;
+        return "Ime i prezime: " + name + " " + surname + " Matični broj: " + id + " Spol: " + gender.getName() + " Starost: " + age + ". godine.";
     }
 }
