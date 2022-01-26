@@ -10,6 +10,7 @@ public class SetTester {
 
         System.out.println("---------- Hash Set ----------");
         System.out.println(" ");
+        //izbacuje duplikate i ne čuva redoslijed
         Set<String> namesHashSet = new HashSet<>();
         namesHashSet.add("Mrko");
         namesHashSet.add("Sinan");
@@ -23,6 +24,7 @@ public class SetTester {
 
         System.out.println("---------- Linked Hash Set ----------");
         System.out.println(" ");
+        //izbacuje duplikate ali čuva redoslijed unosa
         Set<String> namesLinkedHashSet = new LinkedHashSet<>();
         namesLinkedHashSet.add("Mrko");
         namesLinkedHashSet.add("Sinan");
@@ -36,11 +38,12 @@ public class SetTester {
 
         System.out.println("---------- Tree Set ----------");
         System.out.println(" ");
+        //izbacuje duplikate dok redoslijed je abecedni
         Set<String> namesTreeSet = new TreeSet<>();
         namesTreeSet.add("Mrko");
         namesTreeSet.add("Sinan");
         namesTreeSet.add("Sinan");
-        namesTreeSet.add("adnan");
+        namesTreeSet.add("Adnan");
         namesTreeSet.add("Mrko");
 
         for (String element : namesTreeSet){
