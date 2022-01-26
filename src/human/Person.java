@@ -2,6 +2,8 @@ package human;
 
 import animal.Animal;
 
+import java.util.Objects;
+
 public class Person {
     private String name, surname, id;
     private Gender gender;
@@ -87,5 +89,18 @@ public class Person {
     @Override
     public String toString() {
         return "Ime i prezime: " + name + " " + surname + " Matični broj: " + id + " Spol: " + gender.getName() + " Starost: " + age + ". godine.";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(name, person.name) && Objects.equals(surname, person.surname) && Objects.equals(id, person.id) && gender == person.gender && Objects.equals(pets, person.pets);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, id, gender, age, pets);
     }
 }

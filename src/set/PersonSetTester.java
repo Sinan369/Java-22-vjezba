@@ -1,13 +1,16 @@
-package list;
+package set;
 
 import human.Gender;
 import human.Person;
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
-public class PersonListTester {
+public class PersonSetTester {
     public static void main(String[] args) {
-        List<Person> persons = new ArrayList<>();
+        Collection<Person> persons = new HashSet<>();
         Person p = new Person("Sinan", "Sinanovic", "1558451555", Gender.MALE, 23);
         persons.add(p);
         Person p1 = new Person("Sinan", "Sinanovic", "1558451555", Gender.MALE, 23);
