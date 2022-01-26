@@ -3,10 +3,12 @@ import animal.Cat;
 import animal.Dog;
 import human.*;
 
+import java.time.LocalDate;
+
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("Armin", "Husic", "121000587745454", Gender.MALE, 18, 557788, new Cat("Mikica", Gender.FEMALE, 11884, 1, "Turska Van Mačka"));
+        Student student = new Student("Armin", "Husic", "121000587745454", Gender.MALE, LocalDate.of(2008, 4, 1), 557788, new Cat("Mikica", Gender.FEMALE, 11884, 1, "Turska Van Mačka"));
         student.getName();
         student.getSurname();
         student.getAge();
@@ -15,7 +17,7 @@ public class Main {
         student.getIndexId();
         student.getPets();
         System.out.println("---------------");
-        Professor profa = new Professor("Amar", "Feratovic", "14050023789894", Gender.MALE, 20, 1000, "prof.dr", new Dog("Roža", Gender.MALE, 55778,3, "Huskey"));
+        Professor profa = new Professor("Amar", "Feratovic", "14050023789894", Gender.MALE, LocalDate.of(2006, 1, 1), 1000, "prof.dr", new Dog("Roža", Gender.MALE, 55778,3, "Huskey"));
         profa.getName();
         profa.getSurname();
         profa.getAge();
@@ -25,7 +27,7 @@ public class Main {
         profa.getAcademicTitle();
         profa.getPets();
         System.out.println("---------------");
-        Person osoba = new Person("Adnan", "Abazovic", "17120044844454", Gender.MALE, 21);
+        Person osoba = new Person("Adnan", "Abazovic", "17120044844454", Gender.MALE, LocalDate.of(2001, 1, 5));
         osoba.getName();
         osoba.getSurname();
         osoba.getAge();

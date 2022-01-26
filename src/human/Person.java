@@ -2,28 +2,29 @@ package human;
 
 import animal.Animal;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Person implements Comparable<Person>{
     private String name, surname, id;
     private Gender gender;
-    private int age;
+    private LocalDate birthday;
     private Animal pets;
 
-    public Person(String name, String surname, String id, Gender gender, int age) {
+    public Person(String name, String surname, String id, Gender gender, LocalDate birthday) {
         this.name = name;
         this.surname = surname;
         this.id = id;
         this.gender = gender;
-        this.age = age;
+        this.birthday = birthday;
     }
 
-    public Person(String name, String surname, String id, Gender gender, int age, Animal pets) {
+    public Person(String name, String surname, String id, Gender gender, LocalDate birthday, Animal pets) {
         this.name = name;
         this.surname = surname;
         this.id = id;
         this.gender = gender;
-        this.age = age;
+        this.birthday = birthday;
         this.pets = pets;
     }
 
@@ -78,21 +79,25 @@ public class Person implements Comparable<Person>{
     }
 
     public int getAge() {
+        LocalDate now = LocalDate.now();
+        int age = birthday.until(now).getYears();
         System.out.println("Starost je: " + age);
         return age;
     }
 
     public int compareAge() {
+        LocalDate now = LocalDate.now();
+        int age = birthday.until(now).getYears();
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     @Override
     public String toString() {
-        return "Ime i prezime: " + name + " " + surname + " Matični broj: " + id + " Spol: " + gender.getName() + " Starost: " + age + ". godine.";
+        return "Ime i prezime: " + name + " " + surname + " Matični broj: " + id + " Spol: " + gender.getName() + " Starost: " + getAge() + ". godine.";
     }
 
     @Override
@@ -100,16 +105,19 @@ public class Person implements Comparable<Person>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name) && Objects.equals(surname, person.surname) && Objects.equals(id, person.id) && gender == person.gender && Objects.equals(pets, person.pets);
+        return birthday == person.birthday && Objects.equals(name, person.name) && Objects.equals(surname, person.surname) && Objects.equals(id, person.id) && gender == person.gender && Objects.equals(pets, person.pets);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, id, gender, age, pets);
+        return Objects.hash(name, surname, id, gender, birthday, pets);
     }
 
     @Override
     public int compareTo(Person o) {
+        LocalDate now = LocalDate.now();
+        int age = birthday.until(now).getYears();
+
         if (age < o.compareAge()) {
             return -1;
         }

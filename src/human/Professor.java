@@ -2,11 +2,13 @@ package human;
 
 import animal.Animal;
 
+import java.time.LocalDate;
+
 public class Professor extends Employee {
     private String academicTitle;
 
-    public Professor(String name, String surname, String id, Gender gender, int age, double salaryAmount, String academicTitle, Animal pets) {
-        super(name, surname, id, gender, age, pets, salaryAmount);
+    public Professor(String name, String surname, String id, Gender gender, LocalDate birthday, double salaryAmount, String academicTitle, Animal pets) {
+        super(name, surname, id, gender, birthday, pets, salaryAmount);
         this.academicTitle = academicTitle;
     }
 

@@ -2,12 +2,14 @@ package human;
 
 import animal.Animal;
 
+import java.time.LocalDate;
+
 public class Employee extends Person{
     private double salaryAmount;
 
 
-    public Employee(String name, String surname, String id, Gender gender, int age, Animal pets, double salaryAmount) {
-        super(name, surname, id, gender, age, pets);
+    public Employee(String name, String surname, String id, Gender gender, LocalDate birthday, Animal pets, double salaryAmount) {
+        super(name, surname, id, gender, birthday, pets);
         this.salaryAmount = salaryAmount;
     }
 
