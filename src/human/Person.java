@@ -2,7 +2,7 @@ package human;
 
 import animal.Animal;
 
-public abstract class Person {
+public class Person {
     private String name, surname, id;
     private Gender gender;
     private int age;
@@ -84,4 +84,8 @@ public abstract class Person {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return name + " " + surname + " Matični broj: " + id + " " + gender.getName() + " Starost: " + age;
+    }
 }

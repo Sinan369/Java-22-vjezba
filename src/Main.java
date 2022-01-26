@@ -6,8 +6,7 @@ import human.*;
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("Armin", "Husic", "121000587745454", Gender.MALE, 18, 557788, new Cat("Mikica", Gender.FEMALE, 11884, 1, "Turska Van Mačka") {
-        });
+        Student student = new Student("Armin", "Husic", "121000587745454", Gender.MALE, 18, 557788, new Cat("Mikica", Gender.FEMALE, 11884, 1, "Turska Van Mačka"));
         student.getName();
         student.getSurname();
         student.getAge();

@@ -2,8 +2,8 @@ package human;
 
 public enum Gender {
 
-    MALE("Muško rod","Jaki i pametni"),
-    FEMALE("Žensko rod","Nježni i krhki"),
+    MALE("Muški rod","Jaki i pametni"),
+    FEMALE("Ženski rod","Nježni i krhki"),
     OTHER("Nepoznati rod", "Ne želi da se oda")
 
     ;
