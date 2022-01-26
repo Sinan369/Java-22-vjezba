@@ -52,7 +52,7 @@ public class PersonSetTester {
 
         System.out.println(" ");
         System.out.println("---------- Tree Set ----------");
-        // u ovom slučaju porede se godine!!! Sve izmjene se nalaze na lokaciji human.Person u liniji koda od 111 do 120!
+        // u ovom slučaju porede se godine!!! Sve izmjene se nalaze na lokaciji human.Person u liniji koda od 117 do 127!
         Collection<Person> personsTreeSet = new TreeSet<>();
         Person p10 = new Person("Sinan", "Sinanovic", "1558451555", Gender.MALE, LocalDate.of(2001, 10, 16));
         personsTreeSet.add(p10);
