@@ -2,19 +2,23 @@ package animal;
 
 import human.Gender;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public abstract class Animal {
     private String name;
     private Gender gender;
-    private int id, age;
+    private int id;
+    private LocalDate birthday;
 
     public Animal() {
     }
 
-    public Animal(String name, Gender gender, int id, int age) {
+    public Animal(String name, Gender gender, int id, LocalDate birthday) {
         this.name = name;
         this.gender = gender;
         this.id = id;
-        this.age = age;
+        this.birthday = birthday;
     }
 
     public String getName() {
@@ -41,16 +45,23 @@ public abstract class Animal {
         this.id = id;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    public int getAge() {
+        LocalDate now = LocalDate.now();
+        Period period = birthday.until(now);
+        int age= period.getYears();
+        return age;
     }
 
     @Override
     public String toString() {
-        return "Ime ljubimca: " +  name + " " + age + " godine " + "ID: " + id;
+        return "Ime ljubimca: " +  name + " " + getAge() + " godina " + "ID: " + id;
     }
 }

@@ -2,6 +2,8 @@ package animal;
 
 import human.Gender;
 
+import java.time.LocalDate;
+
 
 public class Cat extends Animal{
 
@@ -11,8 +13,8 @@ public class Cat extends Animal{
 
     private String catBreed;
 
-    public Cat(String name, Gender gender, int id, int age, String catBreed) {
-        super(name, gender, id, age);
+    public Cat(String name, Gender gender, int id, LocalDate birthday, String catBreed) {
+        super(name, gender, id, birthday);
     }
 
 

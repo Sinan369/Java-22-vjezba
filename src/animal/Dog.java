@@ -2,12 +2,14 @@ package animal;
 
 import human.Gender;
 
+import java.time.LocalDate;
+
 public class Dog extends Animal{
     private String dogBreed;
 
 
-    public Dog(String name, Gender gender, int id, int age, String dogBreed) {
-        super(name, gender, id, age);
+    public Dog(String name, Gender gender, int id, LocalDate birthday, String dogBreed) {
+        super(name, gender, id, birthday);
     }
 
     public Dog() {
