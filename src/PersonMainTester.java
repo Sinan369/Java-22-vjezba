@@ -13,6 +13,7 @@ import java.util.List;
 
 public class PersonMainTester {
     public static void main(String[] args) {
+        //Elegantniji način da se riješi ispod zakomentirano!
         PersonReader personReader = new PersonReader();
         List<Person> personList = personReader.upitNaBazu();
 
