@@ -80,7 +80,6 @@ public class Person implements Comparable<Person>{
     public int getAge() {
         LocalDate now = LocalDate.now();
         int age = birthday.until(now).getYears();
-        System.out.println("Starost je: " + age);
         return age;
     }
 
