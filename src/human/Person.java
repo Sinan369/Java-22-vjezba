@@ -70,7 +70,6 @@ public class Person implements Comparable<Person>{
     }
 
     public Gender getGender() {
-        System.out.println("Spol je: " + gender);
         return gender;
     }
 
@@ -97,7 +96,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public String toString() {
-        return "Ime i prezime: " + name + " " + surname + " Matični broj: " + id + " Spol: " + gender.getName() + " Starost: " + getAge() + ". godine.";
+        return "Ime i prezime: " + name + " " + surname + " Spol: " + gender.getName() + " Starost: " + getAge() + ". godine.";
     }
 
     @Override
@@ -126,4 +125,5 @@ public class Person implements Comparable<Person>{
         }
         return 0;
     }
+
 }
