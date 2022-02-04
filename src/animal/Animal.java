@@ -56,12 +56,12 @@ public abstract class Animal {
     public int getAge() {
         LocalDate now = LocalDate.now();
         Period period = birthday.until(now);
-        int age= period.getYears();
+        int age= period.getYears() * 12;
         return age;
     }
 
     @Override
     public String toString() {
-        return "Ime ljubimca: " +  name + " " + getAge() + " godina " + "ID: " + id;
+        return "Ime ljubimca: " +  name + " " + getAge() + " mjeseci " + "ID: " + id;
     }
 }
